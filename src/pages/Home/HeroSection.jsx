@@ -1,32 +1,31 @@
 // =============================================================================
-// HOME — Floodlit hero (pinned Ken Burns scroll sequence)
+// HOME — Floodlit hero (pinned Ken Burns scroll sequence, now with real photos)
 // =============================================================================
-// Three floodlit scenes cross-fade with a slow pan/zoom as you scroll.
-// No image assets required — the scenes are CSS gradients. To use real photos
-// later, give each SCENE an `image` and set the layer background to it.
-// All scroll logic runs client-side only, so the SSG prerender is safe.
+// Three scenes cross-fade with a slow pan/zoom as you scroll. Swap the `img`
+// paths below to change scenes. All scroll logic runs client-side only, so the
+// SSG prerender is safe.
 // =============================================================================
 import { Link } from 'react-router-dom'
 import { useEffect, useRef } from 'react'
 
 const SCENES = [
   {
-    cls: 'floodlit-1', pan: [-1, -1],
-    eyebrow: 'The Transatlantic Padel Bridge · Talavera',
+    img: '/images/hero-1-campus.jpg', pan: [-1, -1],
+    eyebrow: 'The Transatlantic Padel Bridge \u00B7 Talavera',
     title: 'Sport and school\nunder one roof.',
-    sub: 'A residential padel academy and international school for junior players — where families stop choosing between serious sport and real education.',
+    sub: 'A residential padel academy and international school for junior players \u2014 where families stop choosing between serious sport and real education.',
   },
   {
-    cls: 'floodlit-2', pan: [1, -1],
+    img: '/images/hero-2-training.jpg', pan: [1, -1],
     eyebrow: 'The training',
-    title: 'Train like it’s\nyour profession.',
+    title: 'Train like it\u2019s\nyour profession.',
     sub: 'Certified Spanish coaches, low ratios, and a periodised plan built for one player: yours.',
   },
   {
-    cls: 'floodlit-3', pan: [-1, 1],
+    img: '/images/hero-3-athlete.jpg', pan: [-1, 1],
     eyebrow: 'The whole athlete',
-    title: 'Grow like it’s\nyour life.',
-    sub: 'Accredited schooling, character, and round-the-clock duty of care — on one campus.',
+    title: 'Grow like it\u2019s\nyour life.',
+    sub: 'Accredited schooling, character, and round-the-clock duty of care \u2014 on one campus.',
   },
 ]
 
@@ -81,35 +80,37 @@ export default function HeroSection() {
 
   return (
     <section ref={trackRef} className="relative w-full" style={{ height: '300vh' }}>
-      <div className="sticky top-0 h-screen w-full overflow-hidden">
+      <div className="sticky top-0 h-screen w-full overflow-hidden bg-background">
         {SCENES.map((s, i) => (
           <div
-            key={s.cls}
+            key={s.img}
             ref={(el) => (layerRefs.current[i] = el)}
-            className={`absolute inset-[-2%] ${s.cls}`}
-            style={{ opacity: i === 0 ? 1 : 0, transform: 'scale(1.08)', willChange: 'opacity, transform' }}
+            className="absolute inset-[-2%] bg-center bg-cover"
+            style={{ backgroundImage: `url(${s.img})`, opacity: i === 0 ? 1 : 0, transform: 'scale(1.08)', willChange: 'opacity, transform', filter: 'saturate(0.88) contrast(1.04) brightness(0.86)' }}
           />
         ))}
+        {/* navy cohesion tint + grain + bottom grade for legibility */}
+        <div className="absolute inset-0 pointer-events-none" style={{ background: 'rgba(10,22,40,0.42)', mixBlendMode: 'multiply' }} />
         <div className="absolute inset-0 hero-grain opacity-[0.06] mix-blend-overlay pointer-events-none" />
-        <div className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(to top, rgba(10,22,40,0.92) 0%, rgba(10,22,40,0.28) 42%, rgba(10,22,40,0) 72%), radial-gradient(130% 90% at 50% 55%, transparent 42%, rgba(10,22,40,0.5))' }} />
+        <div className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(to top, rgba(10,22,40,0.94) 0%, rgba(10,22,40,0.35) 44%, rgba(10,22,40,0) 74%), radial-gradient(130% 90% at 50% 55%, transparent 40%, rgba(10,22,40,0.55))' }} />
 
         <div className="absolute inset-0 z-10 flex items-end">
           <div className="relative w-full">
             {SCENES.map((s, i) => (
               <div
-                key={s.cls}
+                key={s.img}
                 ref={(el) => (copyRefs.current[i] = el)}
                 className="absolute inset-x-0 bottom-0 max-w-[1100px] mx-auto px-[24px] md:px-[55px] pb-[14vh]"
                 style={{ opacity: i === 0 ? 1 : 0, willChange: 'opacity, transform' }}
               >
-                <p className="font-data text-data tracking-[0.3em] text-foreground/60 uppercase flex items-center gap-3">
+                <p className="font-data text-data tracking-[0.3em] text-foreground/70 uppercase flex items-center gap-3">
                   <span className="inline-block w-[7px] h-[7px] bg-flood" />
                   {s.eyebrow}
                 </p>
                 <h1 className="font-heading font-light leading-[0.98] tracking-[-0.01em] mt-5 whitespace-pre-line" style={{ fontSize: 'clamp(2.6rem, 8vw, 6rem)' }}>
                   {s.title}
                 </h1>
-                <p className="font-body font-light text-foreground/80 leading-relaxed max-w-[620px] mt-6" style={{ fontSize: 'clamp(1.05rem, 1.4vw, 1.25rem)' }}>
+                <p className="font-body font-light text-foreground/85 leading-relaxed max-w-[620px] mt-6" style={{ fontSize: 'clamp(1.05rem, 1.4vw, 1.25rem)' }}>
                   {s.sub}
                 </p>
                 {i === 0 && (
