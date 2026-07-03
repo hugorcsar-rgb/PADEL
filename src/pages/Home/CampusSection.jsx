@@ -30,6 +30,9 @@ export default function CampusSection() {
           Phase one opens with the courts, the high-performance core, a partnered residence, and an accredited academic partner. The campus grows — more courts, a pool, expanded residence — as enrolment grows.
         </p>
         <div><Link to="/facilities" className="inline-flex items-center px-8 py-4 bg-transparent text-foreground font-data text-[12px] font-medium tracking-[0.22em] uppercase border border-foreground/40 hover:border-accent hover:text-accent transition-colors duration-300">Tour the campus</Link></div>
+        <figure className="w-full overflow-hidden">
+          <img src="/images/campus-court.jpg" alt="A panoramic glass padel court" className="w-full h-[46vh] min-h-[320px] object-cover hero-image-desaturated" loading="lazy" />
+        </figure>
       </div>
     </section>
   )
