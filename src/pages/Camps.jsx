@@ -17,7 +17,11 @@ export default function Camps() {
   return (
     <>
       <section className="relative min-h-[80vh] flex flex-col justify-center px-[24px] md:px-[89px] overflow-hidden">
-        <div className="absolute inset-0 z-0 floodlit-page" />
+        <div className="absolute inset-0 z-0">
+          <img src="/images/camps.jpg" alt="" className="w-full h-full object-cover hero-image-desaturated" />
+          <div className="absolute inset-0 armani-glow mix-blend-multiply" />
+          <div className="absolute inset-0 bg-background/45" />
+        </div>
         <div className="absolute inset-0 hero-grain opacity-[0.06] mix-blend-overlay pointer-events-none" />
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: [0.4, 0, 0.2, 1] }} className="relative z-10 max-w-[1000px] mt-20">
           <p className="font-data text-data tracking-[0.3em] text-foreground/60 uppercase mb-6"><span className="inline-block w-[7px] h-[7px] bg-flood mr-3 align-middle" />{HERO_NUMBER} · {HERO_LABEL}</p>
