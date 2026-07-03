@@ -25,6 +25,9 @@ export default function ProgramsSection() {
             </article>
           ))}
         </div>
+        <figure className="w-full overflow-hidden">
+          <img src="/images/programs.jpg" alt="Padel paddles and balls on a blue court" className="w-full h-[42vh] min-h-[300px] object-cover hero-image-desaturated" loading="lazy" />
+        </figure>
       </div>
     </section>
   )
