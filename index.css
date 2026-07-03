@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-background text-foreground font-body overflow-x-hidden;
+    font-weight: 300;
+    font-size: clamp(1rem, 1.4vw, 1.125rem);
+    line-height: 1.8;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection { background: rgb(182 172 151 / 0.85); color: #0A1628; }
+}
+
+@layer components {
+  .font-data    { font-family: "DM Sans", system-ui, sans-serif; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; }
+  .font-heading { font-family: "Fraunces", Georgia, serif; font-weight: 300; }
+  .font-body    { font-family: "DM Sans", system-ui, sans-serif; }
+
+  .armani-glow {
+    background: radial-gradient(120% 90% at 50% 0%, transparent 0%, rgba(10, 22, 40, 0.55) 60%, rgba(10, 22, 40, 0.92) 100%);
+  }
+  .premium-spacing { padding-block: clamp(5rem, 11vw, 9rem); padding-inline: clamp(1.5rem, 12vw, 12rem); }
+  .hero-image-desaturated { filter: grayscale(22%) saturate(0.82) contrast(1.06) brightness(0.9) sepia(0.08); }
+  .mahogany-transition { transition: filter 0.8s ease, transform 1.2s ease; }
+
+  .gold-rule { height: 1px; background: linear-gradient(90deg, transparent, rgb(182 172 151 / 0.6), transparent); border: 0; }
+
+  .text-hero    { font-size: clamp(3.5rem, 9vw + 1rem, 9rem); }
+  .text-section { font-size: clamp(2.25rem, 3.2vw + 1rem, 3.25rem); }
+  .text-sub     { font-size: clamp(1.5rem, 2vw + 1rem, 2rem); }
+  .text-body    { font-size: clamp(1rem, 1.4vw, 1.125rem); }
+  .text-data    { font-size: clamp(0.72rem, 0.8vw, 0.82rem); }
+
+  .scroll-line { width: 1px; height: 44px; background: #B6AC97; transform-origin: top; animation: scrollPulse 2.4s ease-in-out infinite; }
+  @keyframes scrollPulse { 0%,100% { transform: scaleY(0.35); opacity: 0.35; } 50% { transform: scaleY(1); opacity: 1; } }
+
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+
+  /* ── Floodlit hero backgrounds (no image assets needed) ──────────────── */
+  .floodlit-1 { background: radial-gradient(90% 70% at 50% -10%, rgba(127,166,201,0.35), transparent 60%), radial-gradient(120% 100% at 30% 34%, #14243a 0%, #0a1628 58%, #070f1c 100%); }
+  .floodlit-2 { background: radial-gradient(72% 55% at 70% 4%, rgba(232,230,223,0.20), transparent 55%), radial-gradient(120% 120% at 64% 42%, #16263c 0%, #0a1628 55%, #081120 100%); }
+  .floodlit-3 { background: radial-gradient(88% 78% at 40% 72%, rgba(200,185,154,0.16), transparent 60%), radial-gradient(130% 110% at 46% 56%, #101d30 0%, #0a1628 55%, #070f1c 100%); }
+  .floodlit-page { background: radial-gradient(80% 60% at 72% -10%, rgba(127,166,201,0.22), transparent 60%), linear-gradient(180deg, #0e1c30 0%, #0a1628 60%, #081120 100%); }
+  .hero-grain { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.85'/%3E%3C/svg%3E"); }
+}

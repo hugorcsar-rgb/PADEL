@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://thepadelbridge.com/sitemap.xml
