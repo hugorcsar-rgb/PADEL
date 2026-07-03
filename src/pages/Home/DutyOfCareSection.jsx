@@ -25,6 +25,9 @@ export default function DutyOfCareSection() {
             </article>
           ))}
         </div>
+        <figure className="w-full overflow-hidden">
+          <img src="/images/net.jpg" alt="A padel court net in low light" className="w-full h-[42vh] min-h-[300px] object-cover hero-image-desaturated" loading="lazy" />
+        </figure>
       </div>
     </section>
   )
