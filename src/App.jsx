@@ -3,7 +3,8 @@
 import Layout from './components/Layout.jsx';
 import Home from './pages/Home/index.jsx';
 import Academy from './pages/Academy.jsx';
-import Camps from './pages/Camps.jsx';
+import Tenis from './pages/Tenis.jsx';
+import Futbol from './pages/Futbol.jsx';
 import Method from './pages/Method.jsx';
 import Facilities from './pages/Facilities.jsx';
 import Inquire from './pages/Inquire.jsx';
@@ -14,13 +15,14 @@ export const routes = [
     path: '/',
     element: <Layout />,
     children: [
-      { index: true, element: <Home />, handle: { title: 'The Padel Bridge — Residential Padel Academy & International School' } },
-      { path: 'academy', element: <Academy />, handle: { title: 'The Academy — Full-Year Residential Padel & School · The Padel Bridge' } },
-      { path: 'camps', element: <Camps />, handle: { title: 'Camps & Trials — Summer and Seasonal Padel · The Padel Bridge' } },
-      { path: 'method', element: <Method />, handle: { title: 'The Method — Athletic, Academic & Character · The Padel Bridge' } },
-      { path: 'facilities', element: <Facilities />, handle: { title: 'The Campus — Courts, Sports Science & Residence · The Padel Bridge' } },
-      { path: 'inquire', element: <Inquire />, handle: { title: 'Enquire — The Padel Bridge' } },
-      { path: 'privacy', element: <Privacy />, handle: { title: 'Privacy Notice — The Padel Bridge' } },
+      { index: true, element: <Home />, handle: { title: 'SAR — Academia Deportiva Internacional · Pádel, Tenis y Fútbol en España' } },
+      { path: 'padel', element: <Academy />, handle: { title: 'Pádel — Academia y Escuela Residencial · SAR' } },
+      { path: 'tenis', element: <Tenis />, handle: { title: 'Tenis — El Sistema Español de Formación · SAR' } },
+      { path: 'futbol', element: <Futbol />, handle: { title: 'Fútbol — En Alianza con Prime Play · SAR' } },
+      { path: 'metodo', element: <Method />, handle: { title: 'El Método — Deportivo, Académico y de Carácter · SAR' } },
+      { path: 'campus', element: <Facilities />, handle: { title: 'El Campus — Instalaciones y Residencia · SAR' } },
+      { path: 'contacto', element: <Inquire />, handle: { title: 'Contacto — SAR' } },
+      { path: 'privacy', element: <Privacy />, handle: { title: 'Aviso de Privacidad — SAR' } },
     ],
   },
 ];
