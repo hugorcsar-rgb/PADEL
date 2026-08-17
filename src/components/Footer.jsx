@@ -2,29 +2,30 @@ import { Link } from 'react-router-dom'
 
 // ─── BRAND — wordmark, subtitle, and tagline shown on the left ─────────────
 const BRAND = {
-  wordmark: "PADEL BRIDGE",
-  subtitle: "Academy & School",
-  tagline:  "Sport and school under one roof. Built for the next generation.",
+  wordmark: "SAR",
+  subtitle: "Academia Deportiva Internacional",
+  tagline:  "Pádel, tenis y fútbol. Un sistema de desarrollo real entre México, España y Estados Unidos.",
 }
 
 // ─── COLUMNS — three columns of links on the right ─────────────────────────
 const COLUMNS = [
-  { heading: "Programs", links: [
-    { to: '/academy', label: 'The Academy' },
-    { to: '/camps',   label: 'Camps & Trials' },
-    { to: '/method',  label: 'The Method' },
+  { heading: "Deportes", links: [
+    { to: '/padel',  label: 'Pádel'  },
+    { to: '/tenis',  label: 'Tenis'  },
+    { to: '/futbol', label: 'Fútbol' },
   ]},
-  { heading: "Academy", links: [
-    { to: '/facilities', label: 'The Campus' },
-    { to: '/inquire',    label: 'Enquire' },
+  { heading: "Academia", links: [
+    { to: '/metodo',   label: 'El Método' },
+    { to: '/campus',   label: 'El Campus' },
+    { to: '/contacto', label: 'Contacto'  },
   ]},
   { heading: "Legal", links: [
-    { to: '/privacy', label: 'Privacy' },
+    { to: '/privacy', label: 'Privacidad' },
   ]},
 ]
 
-const COPYRIGHT_OWNER = "The Padel Bridge"
-const CONTACT_EMAIL   = "hello@thepadelbridge.com"
+const COPYRIGHT_OWNER = "SAR"
+const CONTACT_EMAIL   = "hello@sar.com"
 
 // ─── LAYOUT — only edit if you know React ──────────────────────────────────
 const toRoman = (n) => {
@@ -59,7 +60,7 @@ export default function Footer() {
 
       <div className="border-t border-accent/20">
         <div className="px-[24px] md:px-[55px] py-6 flex flex-col md:flex-row md:items-center md:justify-between gap-3 font-data text-[11px] tracking-[0.3em] uppercase text-stone/60">
-          <p>Talavera de la Reina · The Woodlands · {toRoman(year)}</p>
+          <p>Talavera de la Reina · México · Estados Unidos · {toRoman(year)}</p>
           <p className="flex items-center gap-4">
             <a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-foreground transition-colors">{CONTACT_EMAIL}</a>
             <span className="text-stone/30">© {COPYRIGHT_OWNER}</span>
