@@ -2,19 +2,20 @@ import { NavLink, Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
 // ─── BRAND — edit the wordmark and subtitle ────────────────────────────────
-const BRAND = { wordmark: "PADEL BRIDGE", subtitle: "Academy & School" }
+const BRAND = { wordmark: "SAR", subtitle: "Academia Deportiva Internacional" }
 
 // ─── LINKS — add, remove, or rename nav items ──────────────────────────────
 const LINKS = [
-  { to: '/',           label: 'Home'       },
-  { to: '/academy',    label: 'Academy'    },
-  { to: '/camps',      label: 'Camps'      },
-  { to: '/method',     label: 'Method'     },
-  { to: '/facilities', label: 'Campus'     },
+  { to: '/',        label: 'Inicio'  },
+  { to: '/padel',   label: 'Pádel'   },
+  { to: '/tenis',   label: 'Tenis'   },
+  { to: '/futbol',  label: 'Fútbol'  },
+  { to: '/metodo',  label: 'Método'  },
+  { to: '/campus',  label: 'Campus'  },
 ]
 
 // ─── CTA — the greige button on the far right ──────────────────────────────
-const CTA = { to: '/inquire', label: 'Enquire' }
+const CTA = { to: '/contacto', label: 'Contacto' }
 
 // ─── LAYOUT — only edit if you know React ──────────────────────────────────
 export default function Nav() {
