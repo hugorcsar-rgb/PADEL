@@ -5,6 +5,7 @@ import Home from './pages/Home/index.jsx';
 import Academy from './pages/Academy.jsx';
 import Tenis from './pages/Tenis.jsx';
 import Futbol from './pages/Futbol.jsx';
+import Camps from './pages/Camps.jsx';
 import Method from './pages/Method.jsx';
 import Facilities from './pages/Facilities.jsx';
 import Inquire from './pages/Inquire.jsx';
@@ -19,6 +20,7 @@ export const routes = [
       { path: 'padel', element: <Academy />, handle: { title: 'Pádel — Academia y Escuela Residencial · SAR' } },
       { path: 'tenis', element: <Tenis />, handle: { title: 'Tenis — El Sistema Español de Formación · SAR' } },
       { path: 'futbol', element: <Futbol />, handle: { title: 'Fútbol — En Alianza con Prime Play · SAR' } },
+      { path: 'campamentos', element: <Camps />, handle: { title: 'Campamentos — Verano y Semana Santa · SAR' } },
       { path: 'metodo', element: <Method />, handle: { title: 'El Método — Deportivo, Académico y de Carácter · SAR' } },
       { path: 'campus', element: <Facilities />, handle: { title: 'El Campus — Instalaciones y Residencia · SAR' } },
       { path: 'contacto', element: <Inquire />, handle: { title: 'Contacto — SAR' } },
