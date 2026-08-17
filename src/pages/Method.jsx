@@ -2,13 +2,13 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
-const HERO_TITLE = "The Method."
-const HERO_SUB   = "Three pillars, one standard. We develop a player, a student, and a person at the same time — and refuse to trade one for another."
+const HERO_TITLE = "El Método."
+const HERO_SUB   = "Tres pilares, un solo estándar. Desarrollamos a un jugador, un estudiante y una persona al mismo tiempo — y nos negamos a sacrificar uno por otro."
 
 const PILLARS = [
-  ["Athletic", "Individualised technical and tactical work, periodised physical conditioning, video analysis, and structured competition. Real match play in pozos against players of equal or higher level — the fastest way to improve."],
-  ["Academic", "An accredited international curriculum delivered in small classes, with tutors in residence and a timetable that protects both school and training. Schooling continues, uninterrupted, wherever a player comes from."],
-  ["Character", "A defined values method — effort, discipline, respect, humility, resilience — supported by sports psychology, nutrition education, and life skills. Regular assessments turn into honest reports home."],
+  ["Deportivo", "Trabajo técnico y táctico individualizado, acondicionamiento físico periodizado, análisis de video y competencia estructurada. Partidos reales contra jugadores de nivel igual o superior — la forma más rápida de mejorar."],
+  ["Académico", "Un plan académico internacional acreditado, impartido en clases reducidas, con tutores en residencia y un horario que protege tanto la escuela como el entrenamiento. La educación continúa sin interrupciones, sin importar de dónde venga el jugador."],
+  ["Carácter", "Un método de valores definido — esfuerzo, disciplina, respeto, humildad, resiliencia — respaldado por psicología deportiva, educación nutricional y habilidades para la vida. Evaluaciones regulares que se convierten en reportes honestos a casa."],
 ]
 
 export default function Method() {
@@ -22,7 +22,7 @@ export default function Method() {
         </div>
         <div className="absolute inset-0 hero-grain opacity-[0.06] mix-blend-overlay pointer-events-none" />
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: [0.4, 0, 0.2, 1] }} className="relative z-10 max-w-[1000px] mt-20">
-          <p className="font-data text-data tracking-[0.3em] text-foreground/60 uppercase mb-6"><span className="inline-block w-[7px] h-[7px] bg-flood mr-3 align-middle" />The Method</p>
+          <p className="font-data text-data tracking-[0.3em] text-foreground/60 uppercase mb-6"><span className="inline-block w-[7px] h-[7px] bg-flood mr-3 align-middle" />El Método</p>
           <h1 className="font-heading text-foreground leading-none mb-8" style={{ fontSize: 'clamp(3.5rem, 9vw, 8rem)' }}>{HERO_TITLE}</h1>
           <p className="font-heading text-foreground/85 leading-[1.55] max-w-[760px]" style={{ fontSize: 'clamp(1.125rem, 1.7vw, 1.5rem)' }}>{HERO_SUB}</p>
         </motion.div>
@@ -39,7 +39,7 @@ export default function Method() {
               <p className="md:col-span-8 font-body text-body text-foreground/80 leading-relaxed">{body}</p>
             </div>
           ))}
-          <div><Link to="/inquire" className="inline-flex items-center px-8 py-4 bg-accent text-accent-foreground font-data text-[12px] font-bold tracking-[0.2em] uppercase border border-accent hover:bg-transparent hover:text-accent transition-colors duration-300">Enquire &rarr;</Link></div>
+          <div><Link to="/contacto" className="inline-flex items-center px-8 py-4 bg-accent text-accent-foreground font-data text-[12px] font-bold tracking-[0.2em] uppercase border border-accent hover:bg-transparent hover:text-accent transition-colors duration-300">Contacto &rarr;</Link></div>
         </div>
       </section>
     </>
