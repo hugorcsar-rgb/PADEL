@@ -15,9 +15,10 @@ const COLUMNS = [
     { to: '/futbol', label: 'Fútbol' },
   ]},
   { heading: "Academia", links: [
-    { to: '/metodo',   label: 'El Método' },
-    { to: '/campus',   label: 'El Campus' },
-    { to: '/contacto', label: 'Contacto'  },
+    { to: '/campamentos', label: 'Campamentos' },
+    { to: '/metodo',      label: 'El Método'   },
+    { to: '/campus',      label: 'El Campus'   },
+    { to: '/contacto',    label: 'Contacto'    },
   ]},
   { heading: "Legal", links: [
     { to: '/privacy', label: 'Privacidad' },
