@@ -6,12 +6,13 @@ const BRAND = { wordmark: "SAR", subtitle: "Academia Deportiva Internacional" }
 
 // ─── LINKS — add, remove, or rename nav items ──────────────────────────────
 const LINKS = [
-  { to: '/',        label: 'Inicio'  },
-  { to: '/padel',   label: 'Pádel'   },
-  { to: '/tenis',   label: 'Tenis'   },
-  { to: '/futbol',  label: 'Fútbol'  },
-  { to: '/metodo',  label: 'Método'  },
-  { to: '/campus',  label: 'Campus'  },
+  { to: '/',             label: 'Inicio'       },
+  { to: '/padel',        label: 'Pádel'        },
+  { to: '/tenis',        label: 'Tenis'        },
+  { to: '/futbol',       label: 'Fútbol'       },
+  { to: '/campamentos',  label: 'Campamentos'  },
+  { to: '/metodo',       label: 'Método'       },
+  { to: '/campus',       label: 'Campus'       },
 ]
 
 // ─── CTA — the greige button on the far right ──────────────────────────────
