@@ -1,15 +1,15 @@
-// FACILITIES / CAMPUS page. Edit the text consts freely.
+// CAMPUS page. Edit the text consts freely.
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
-const HERO_TITLE = "The Campus."
-const HERO_SUB   = "A purpose-built site in Talavera de la Reina, 75 minutes from Madrid-Barajas. Built in phases — elite from the first court to the last classroom."
+const HERO_TITLE = "El Campus."
+const HERO_SUB   = "Un sitio construido para este propósito en Talavera de la Reina, a 75 minutos de Madrid-Barajas. Construido por fases — de nivel élite desde la primera pista hasta la última aula."
 
 const AREAS = [
-  ["Courts", "6–8 covered panoramic glass courts at a minimum 7.5 m clear ceiling height for full technique and lobs. A center court with seating and video recording for tournaments, showcases, and film review."],
-  ["High-performance center", "A gym and strength-and-conditioning space, sports-science and fitness testing, and physiotherapy and recovery — with a pool and expanded recovery zone in a later phase."],
-  ["Academic wing", "Classrooms, a supervised study hall, a quiet library, and video-analysis rooms — for the accredited curriculum and for tactical education."],
-  ["Residence & campus life", "Supervised residence halls with house-parents and academic tutors in residence, a dining hall built around athlete nutrition, plus a medical room, a pro-shop, and a café for visiting families."],
+  ["Pistas", "6–8 pistas panorámicas cubiertas de cristal, con una altura libre mínima de 7.5 m para técnica y globos completos. Pista central con gradas y grabación de video para torneos, exhibiciones y análisis de partido."],
+  ["Centro de alto rendimiento", "Gimnasio y espacio de fuerza y acondicionamiento, ciencias del deporte y pruebas físicas, fisioterapia y recuperación — con alberca y zona de recuperación ampliada en una fase posterior."],
+  ["Ala académica", "Aulas, sala de estudio supervisada, biblioteca silenciosa y salas de análisis de video — para el plan académico acreditado y para la educación táctica."],
+  ["Residencia y vida en el campus", "Residencias supervisadas con tutores y personal académico en sitio, comedor construido alrededor de la nutrición del atleta, además de sala médica, tienda deportiva y cafetería para familias visitantes."],
 ]
 
 export default function Facilities() {
@@ -23,7 +23,7 @@ export default function Facilities() {
         </div>
         <div className="absolute inset-0 hero-grain opacity-[0.06] mix-blend-overlay pointer-events-none" />
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: [0.4, 0, 0.2, 1] }} className="relative z-10 max-w-[1000px] mt-20">
-          <p className="font-data text-data tracking-[0.3em] text-foreground/60 uppercase mb-6"><span className="inline-block w-[7px] h-[7px] bg-flood mr-3 align-middle" />The Campus</p>
+          <p className="font-data text-data tracking-[0.3em] text-foreground/60 uppercase mb-6"><span className="inline-block w-[7px] h-[7px] bg-flood mr-3 align-middle" />El Campus</p>
           <h1 className="font-heading text-foreground leading-none mb-8" style={{ fontSize: 'clamp(3.5rem, 9vw, 8rem)' }}>{HERO_TITLE}</h1>
           <p className="font-heading text-foreground/85 leading-[1.55] max-w-[760px]" style={{ fontSize: 'clamp(1.125rem, 1.7vw, 1.5rem)' }}>{HERO_SUB}</p>
         </motion.div>
@@ -41,9 +41,9 @@ export default function Facilities() {
             </div>
           ))}
           <p className="font-body text-[15px] text-foreground/55 leading-relaxed max-w-3xl">
-            Phasing: launch with the courts, the high-performance core, a partnered residence, and an accredited academic partner — then expand the campus as enrolment grows. The low Talavera cost base is what makes the staged buildout realistic.
+            Por fases: se lanza con las pistas, el núcleo de alto rendimiento, una residencia asociada y un socio académico acreditado — y el campus se expande conforme crece la matrícula. La base de costos de Talavera es lo que hace realista esta construcción por etapas.
           </p>
-          <div><Link to="/inquire" className="inline-flex items-center px-8 py-4 bg-accent text-accent-foreground font-data text-[12px] font-bold tracking-[0.2em] uppercase border border-accent hover:bg-transparent hover:text-accent transition-colors duration-300">Enquire &rarr;</Link></div>
+          <div><Link to="/contacto" className="inline-flex items-center px-8 py-4 bg-accent text-accent-foreground font-data text-[12px] font-bold tracking-[0.2em] uppercase border border-accent hover:bg-transparent hover:text-accent transition-colors duration-300">Contacto &rarr;</Link></div>
         </div>
       </section>
     </>
