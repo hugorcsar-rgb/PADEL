@@ -1,24 +1,24 @@
-// ACADEMY page (Tier 1 — full-year residential). Edit the text consts freely.
+// PÁDEL page (Tier 1 — full-year residential). Edit the text consts freely.
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
 const HERO_NUMBER = "01"
-const HERO_LABEL  = "Residential Academy"
-const HERO_TITLE  = "The Academy."
-const HERO_SUB    = "Full-year, on-campus, ages 12–18. Live where you train, study an accredited international curriculum, and develop as an athlete and a person — without ever choosing between the two."
+const HERO_LABEL  = "Academia Residencial"
+const HERO_TITLE  = "Pádel."
+const HERO_SUB    = "Año completo, en campus, de 12 a 18 años. Vive donde entrenas, cursa un plan académico internacional acreditado, y te desarrollas como atleta y como persona — sin tener que elegir entre las dos cosas."
 
 const OFFER = [
-  ["Train daily", "Certified Spanish coaches, low player-to-coach ratios, and an individual development plan — technical, tactical, physical — revised through the year."],
-  ["Real schooling", "An accredited international curriculum with small classes and tutors in residence, timetabled around training so nothing is dropped."],
-  ["Live on campus", "Supervised residence with house-parents and tutors on site, sports-nutrition dining, and round-the-clock duty of care."],
-  ["Grow as a person", "The method — effort, discipline, respect, resilience — plus sports psychology and honest reports home on court, class, and character."],
+  ["Entrena a diario", "Entrenadores españoles certificados, baja proporción jugador-entrenador, y un plan de desarrollo individual — técnico, táctico, físico — revisado durante todo el año."],
+  ["Escuela real", "Plan académico internacional acreditado, clases reducidas y tutores en residencia, con horarios organizados alrededor del entrenamiento para que nada se sacrifique."],
+  ["Vive en el campus", "Residencia supervisada con tutores en sitio, comedor de nutrición deportiva, y cuidado continuo las 24 horas."],
+  ["Crece como persona", "El método — esfuerzo, disciplina, respeto, resiliencia — más psicología deportiva y reportes honestos a casa sobre la pista, la clase y el carácter."],
 ]
 
 const DAY = [
-  ["Morning", "School hours — accredited curriculum, small classes."],
-  ["Midday", "First training block: technical and physical work."],
-  ["Afternoon", "Second block: tactical work and match play in pozos."],
-  ["Evening", "Supervised study hall, recovery, and residence life."],
+  ["Mañana", "Horario escolar — plan académico acreditado, clases reducidas."],
+  ["Mediodía", "Primer bloque de entrenamiento: trabajo técnico y físico."],
+  ["Tarde", "Segundo bloque: trabajo táctico y partidos en pozos."],
+  ["Noche", "Estudio supervisado, recuperación, y vida en residencia."],
 ]
 
 export default function Academy() {
@@ -36,8 +36,8 @@ export default function Academy() {
           <h1 className="font-heading text-foreground leading-none mb-8" style={{ fontSize: 'clamp(3.5rem, 9vw, 8rem)' }}>{HERO_TITLE}</h1>
           <p className="font-heading text-foreground/85 leading-[1.55] max-w-[760px]" style={{ fontSize: 'clamp(1.125rem, 1.7vw, 1.5rem)' }}>{HERO_SUB}</p>
           <div className="mt-10 flex flex-wrap gap-4">
-            <Link to="/inquire" className="inline-flex items-center px-8 py-4 bg-accent text-accent-foreground font-data text-[12px] font-bold tracking-[0.2em] uppercase border border-accent hover:bg-transparent hover:text-accent transition-colors duration-300">Enquire</Link>
-            <Link to="/facilities" className="inline-flex items-center px-8 py-4 bg-transparent text-foreground font-data text-[12px] font-bold tracking-[0.2em] uppercase border border-foreground/40 hover:border-accent hover:text-accent transition-colors duration-300">The campus &rarr;</Link>
+            <Link to="/contacto" className="inline-flex items-center px-8 py-4 bg-accent text-accent-foreground font-data text-[12px] font-bold tracking-[0.2em] uppercase border border-accent hover:bg-transparent hover:text-accent transition-colors duration-300">Contacto</Link>
+            <Link to="/campus" className="inline-flex items-center px-8 py-4 bg-transparent text-foreground font-data text-[12px] font-bold tracking-[0.2em] uppercase border border-foreground/40 hover:border-accent hover:text-accent transition-colors duration-300">El campus &rarr;</Link>
           </div>
         </motion.div>
       </section>
@@ -45,8 +45,8 @@ export default function Academy() {
       <section className="w-full premium-spacing border-t border-foreground/10">
         <div className="max-w-[1200px] mx-auto flex flex-col gap-12">
           <div>
-            <p className="font-data text-data tracking-[0.3em] text-foreground/40 uppercase mb-4">The offer</p>
-            <h2 className="font-heading text-section leading-tight">A year that compounds.</h2>
+            <p className="font-data text-data tracking-[0.3em] text-foreground/40 uppercase mb-4">La oferta</p>
+            <h2 className="font-heading text-section leading-tight">Un año que suma.</h2>
           </div>
           <div className="grid sm:grid-cols-2 gap-6">
             {OFFER.map(([t, body]) => (
@@ -62,8 +62,8 @@ export default function Academy() {
       <section className="w-full premium-spacing border-t border-foreground/10">
         <div className="max-w-[1200px] mx-auto flex flex-col gap-12">
           <div>
-            <p className="font-data text-data tracking-[0.3em] text-foreground/40 uppercase mb-4">A day on campus</p>
-            <h2 className="font-heading text-section leading-tight">School, sport, study, rest.</h2>
+            <p className="font-data text-data tracking-[0.3em] text-foreground/40 uppercase mb-4">Un día en el campus</p>
+            <h2 className="font-heading text-section leading-tight">Escuela, deporte, estudio, descanso.</h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {DAY.map(([t, body], i) => (
