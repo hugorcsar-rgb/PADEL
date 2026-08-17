@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import Nav from './Nav.jsx';
 import Footer from './Footer.jsx';
 
-const DEFAULT_TITLE = 'The Padel Bridge — Academy & School';
+const DEFAULT_TITLE = 'SAR — Academia Deportiva Internacional';
 
 function useDocumentTitle() {
   const matches = useMatches();
