@@ -1,13 +1,13 @@
-// HOME — 03 · The Campus
+// HOME — 03 · El Campus
 import { Link } from 'react-router-dom'
 const NUMBER = "03"
-const HEADING = "Built in phases. Elite from day one."
-const LEDE = "A purpose-built campus in Talavera de la Reina, 75 minutes from Madrid — courts, sports science, classrooms, and residence on one site."
+const HEADING = "Construido por fases. De nivel élite desde el día uno."
+const LEDE = "Un campus construido para este propósito en Talavera de la Reina, a 75 minutos de Madrid — pistas, ciencias del deporte, aulas y residencia en un solo sitio."
 const AREAS = [
-  ["Courts", "6–8 covered panoramic glass courts at a minimum 7.5 m clear height, plus a center court with seating and video for showcases and film review."],
-  ["High-performance center", "Strength and conditioning, sports-science and fitness testing, physiotherapy and recovery — with a pool and recovery zone in a later phase."],
-  ["Academic wing", "Classrooms, a supervised study hall, a quiet library, and video-analysis rooms for the accredited curriculum and tactical education."],
-  ["Residence & dining", "Supervised residence halls with house-parents and tutors on site, a dining hall built around sports nutrition, plus medical, pro-shop, and café."],
+  ["Pistas", "6–8 pistas panorámicas cubiertas de cristal con una altura libre mínima de 7.5 m, más una pista central con gradas y video para exhibiciones y análisis de partido."],
+  ["Centro de alto rendimiento", "Fuerza y acondicionamiento, ciencias del deporte y pruebas físicas, fisioterapia y recuperación — con alberca y zona de recuperación en una fase posterior."],
+  ["Ala académica", "Aulas, sala de estudio supervisada, biblioteca silenciosa y salas de análisis de video para el plan académico acreditado y la educación táctica."],
+  ["Residencia y comedor", "Residencias supervisadas con tutores en sitio, comedor construido alrededor de la nutrición deportiva, más sala médica, tienda deportiva y cafetería."],
 ]
 export default function CampusSection() {
   return (
@@ -27,11 +27,11 @@ export default function CampusSection() {
           ))}
         </div>
         <p className="font-body text-[15px] text-foreground/55 leading-relaxed max-w-3xl">
-          Phase one opens with the courts, the high-performance core, a partnered residence, and an accredited academic partner. The campus grows — more courts, a pool, expanded residence — as enrolment grows.
+          La fase uno abre con las pistas, el núcleo de alto rendimiento, una residencia asociada y un socio académico acreditado. El campus crece — más pistas, una alberca, residencia ampliada — conforme crece la matrícula.
         </p>
-        <div><Link to="/facilities" className="inline-flex items-center px-8 py-4 bg-transparent text-foreground font-data text-[12px] font-medium tracking-[0.22em] uppercase border border-foreground/40 hover:border-accent hover:text-accent transition-colors duration-300">Tour the campus</Link></div>
+        <div><Link to="/campus" className="inline-flex items-center px-8 py-4 bg-transparent text-foreground font-data text-[12px] font-medium tracking-[0.22em] uppercase border border-foreground/40 hover:border-accent hover:text-accent transition-colors duration-300">Conoce el campus</Link></div>
         <figure className="w-full overflow-hidden">
-          <img src="/images/campus-court.jpg" alt="A panoramic glass padel court" className="w-full h-[46vh] min-h-[320px] object-cover hero-image-desaturated" loading="lazy" />
+          <img src="/images/campus-court.jpg" alt="Pista de pádel panorámica de cristal" className="w-full h-[46vh] min-h-[320px] object-cover hero-image-desaturated" loading="lazy" />
         </figure>
       </div>
     </section>
