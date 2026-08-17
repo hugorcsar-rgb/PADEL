@@ -11,21 +11,21 @@ import { useEffect, useRef } from 'react'
 const SCENES = [
   {
     img: '/images/hero-1-campus.jpg', pan: [-1, -1],
-    eyebrow: 'The Transatlantic Padel Bridge \u00B7 Talavera',
-    title: 'Sport and school\nunder one roof.',
-    sub: 'A residential padel academy and international school for junior players \u2014 where families stop choosing between serious sport and real education.',
+    eyebrow: 'Pádel · Tenis · Fútbol — España',
+    title: 'Donde se entrena\nen serio.',
+    sub: 'España forma a los mejores de estos tres deportes — no por percepción, sino porque ahí están el circuito, los entrenadores y la infraestructura real. Nosotros llevamos ahí a tu jugador.',
   },
   {
     img: '/images/hero-2-training.jpg', pan: [1, -1],
-    eyebrow: 'The training',
-    title: 'Train like it\u2019s\nyour profession.',
-    sub: 'Certified Spanish coaches, low ratios, and a periodised plan built for one player: yours.',
+    eyebrow: 'El método',
+    title: 'Un roadmap,\nno una temporada.',
+    sub: 'Evaluación, colocación en una academia o club real, y un plan de desarrollo individual que se revisa a lo largo del año — no un horario de clases de verano.',
   },
   {
     img: '/images/hero-3-athlete.jpg', pan: [-1, 1],
-    eyebrow: 'The whole athlete',
-    title: 'Grow like it\u2019s\nyour life.',
-    sub: 'Accredited schooling, character, and round-the-clock duty of care \u2014 on one campus.',
+    eyebrow: 'La red',
+    title: 'Compite en Europa.\nRegresa con trayectoria.',
+    sub: 'Torneos y ranking real en el circuito europeo, y una red de contactos deportivos en México, España y Estados Unidos que sostiene la carrera de tu jugador de vuelta en casa.',
   },
 ]
 
@@ -115,8 +115,8 @@ export default function HeroSection() {
                 </p>
                 {i === 0 && (
                   <div className="flex flex-wrap gap-4 mt-8">
-                    <Link to="/inquire" className="inline-flex items-center px-8 py-4 bg-accent text-accent-foreground font-data text-[12px] font-medium tracking-[0.22em] uppercase border border-accent hover:bg-transparent hover:text-accent transition-colors duration-300">Enquire</Link>
-                    <Link to="/camps" className="inline-flex items-center px-8 py-4 bg-transparent text-foreground font-data text-[12px] font-medium tracking-[0.22em] uppercase border border-foreground/40 hover:border-accent hover:text-accent transition-colors duration-300">Camps &amp; dates</Link>
+                    <Link to="/contacto" className="inline-flex items-center px-8 py-4 bg-accent text-accent-foreground font-data text-[12px] font-medium tracking-[0.22em] uppercase border border-accent hover:bg-transparent hover:text-accent transition-colors duration-300">Contacto</Link>
+                    <Link to="/metodo" className="inline-flex items-center px-8 py-4 bg-transparent text-foreground font-data text-[12px] font-medium tracking-[0.22em] uppercase border border-foreground/40 hover:border-accent hover:text-accent transition-colors duration-300">El método</Link>
                   </div>
                 )}
               </div>
