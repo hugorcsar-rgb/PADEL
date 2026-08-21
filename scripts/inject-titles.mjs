@@ -8,13 +8,15 @@ import { join } from 'node:path';
 const DIST = 'dist';
 
 const TITLES = {
-  'index.html':      'The Padel Bridge — Residential Padel Academy & International School',
-  'academy.html':    'The Academy — Full-Year Residential Padel & School · The Padel Bridge',
-  'camps.html':      'Camps & Trials — Summer and Seasonal Padel · The Padel Bridge',
-  'method.html':     'The Method — Athletic, Academic & Character · The Padel Bridge',
-  'facilities.html': 'The Campus — Courts, Sports Science & Residence · The Padel Bridge',
-  'inquire.html':    'Enquire — The Padel Bridge',
-  'privacy.html':    'Privacy Notice — The Padel Bridge',
+  'index.html':        'SAR — Academia Deportiva Internacional · Pádel, Tenis y Fútbol en España',
+  'padel.html':        'Pádel — Academia y Escuela Residencial · SAR',
+  'tenis.html':        'Tenis — El Sistema Español de Formación · SAR',
+  'futbol.html':       'Fútbol — En Alianza con Prime Play · SAR',
+  'campamentos.html':  'Campamentos — Verano y Semana Santa · SAR',
+  'metodo.html':       'El Método — Deportivo, Académico y de Carácter · SAR',
+  'campus.html':       'El Campus — Instalaciones y Residencia · SAR',
+  'contacto.html':     'Contacto — SAR',
+  'privacy.html':      'Aviso de Privacidad — SAR',
 };
 
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
